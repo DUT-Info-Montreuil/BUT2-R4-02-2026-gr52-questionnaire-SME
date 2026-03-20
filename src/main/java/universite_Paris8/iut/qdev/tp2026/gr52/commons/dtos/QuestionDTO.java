@@ -1,18 +1,20 @@
 package universite_Paris8.iut.qdev.tp2026.gr52.commons.dtos;
 
+import universite_Paris8.iut.qdev.tp2026.gr52.commons.enums.DifficulteEnum;
+
 public class QuestionDTO {
 
     private int numQuestion;
     private String libelleQuestion;
     private String reponse;
-    private int difficulte;
+    private DifficulteEnum difficulte;
     private String explication;
     private String reference;
 
     public QuestionDTO(int numQuestion,
                        String libelleQuestion,
                        String reponse,
-                       int difficulte,
+                       DifficulteEnum difficulte,
                        String explication,
                        String reference) {
         this.numQuestion = numQuestion;
@@ -47,11 +49,11 @@ public class QuestionDTO {
         this.reponse = reponse;
     }
 
-    public int getDifficulte() {
+    public DifficulteEnum getDifficulte() {
         return difficulte;
     }
 
-    public void setDifficulte(int difficulte) {
+    public void setDifficulte(DifficulteEnum difficulte) {
         this.difficulte = difficulte;
     }
 
