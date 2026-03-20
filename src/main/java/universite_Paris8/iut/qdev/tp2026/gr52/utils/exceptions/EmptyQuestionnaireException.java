@@ -1,16 +1,16 @@
-package universite_Paris8.iut.qdev.tp2026.gr52.utils;
+package universite_Paris8.iut.qdev.tp2026.gr52.utils.exceptions;
 
-public class QuestionnaireVideException extends Exception {
+public class EmptyQuestionnaireException extends Exception {
 
-    public QuestionnaireVideException() {
+    public EmptyQuestionnaireException() {
         super("Aucune donnée de questionnaire n’a été trouvée dans le fichier.");
     }
 
-    public QuestionnaireVideException(String nomFichier) {
+    public EmptyQuestionnaireException(String nomFichier) {
         super("Le questionnaire extrait du fichier \"" + nomFichier + "\" est vide (aucune question disponible).");
     }
 
-    public QuestionnaireVideException(String nomFichier, Throwable cause) {
+    public EmptyQuestionnaireException(String nomFichier, Throwable cause) {
         super("Le questionnaire extrait du fichier \"" + nomFichier + "\" est vide ou invalide.", cause);
     }
 }
