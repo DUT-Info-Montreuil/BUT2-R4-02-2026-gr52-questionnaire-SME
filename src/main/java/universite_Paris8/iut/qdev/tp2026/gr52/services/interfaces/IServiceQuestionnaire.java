@@ -1,12 +1,13 @@
 package universite_Paris8.iut.qdev.tp2026.gr52.services.interfaces;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 import universite_Paris8.iut.qdev.tp2026.gr52.commons.dtos.QuestionnaireDTO;
+import universite_Paris8.iut.qdev.tp2026.gr52.utils.exceptions.*;
 
 public interface IServiceQuestionnaire {
 
-    public File chargerFichier(String cheminFichier);
+    InputStream chargerFichier(String cheminFichier) throws MissingFileException, WrongFileFormatException;
 
-    public List<QuestionnaireDTO> fournirListeQuestionnaire(File csvFile);
+    List<QuestionnaireDTO> fournirListeQuestionnaire(InputStream csvFile) throws FileAccessDeniedException, EmptyQuestionnaireException, WrongDataTypeException, DuplicatedQuestionException;
 }
