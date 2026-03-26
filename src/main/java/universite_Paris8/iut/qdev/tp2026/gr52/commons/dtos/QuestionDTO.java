@@ -72,4 +72,12 @@ public class QuestionDTO {
     public void setReference(String reference) {
         this.reference = reference;
     }
+
+    @Override
+    public String toString() {
+        return "QuestionDTO{" +
+                "numQuestion=" + numQuestion +
+                ", libelleQuestion='" + libelleQuestion + '\'' +
+                '}';
+    }
 }

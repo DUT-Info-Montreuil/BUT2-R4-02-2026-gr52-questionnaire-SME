@@ -50,4 +50,12 @@ public class QuestionnaireDTO {
     public void setQuestions(List<QuestionDTO> questions) {
         this.questions = questions;
     }
+
+    @Override
+    public String toString() {
+        return "QuestionnaireDTO{" +
+                "idQuestionnaire=" + idQuestionnaire +
+                ", libelleQuestionnaire='" + libelleQuestionnaire + '\'' +
+                '}';
+    }
 }
